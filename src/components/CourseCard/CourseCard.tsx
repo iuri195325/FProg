@@ -1,4 +1,9 @@
-import { Image, TouchableOpacity, View } from "react-native";
+import {
+  Image,
+  TouchableOpacity,
+  View,
+  TouchableOpacityProps,
+} from "react-native";
 import { Fontisto, AntDesign } from "@expo/vector-icons";
 import { RowIcons } from "./RowIcons/RowIcons";
 import { CourseTitle } from "./CourseTitle/CourseTitle";
@@ -9,16 +14,17 @@ type CourseCardProps = {
   title: string;
   horas: string;
   aulas: string;
-};
+} & TouchableOpacityProps;
 
 export const CourseCard = ({
   aulas,
   horas,
   imageUrl,
   title,
+  ...props
 }: CourseCardProps) => {
   return (
-    <TouchableOpacity style={styles.CourseCard}>
+    <TouchableOpacity {...props} style={styles.CourseCard}>
       <Image
         style={styles.Image}
         source={{
@@ -36,8 +42,8 @@ export const CourseCard = ({
               <Fontisto
                 style={{ marginRight: 10 }}
                 name="film"
-                size={24}
-                color="black"
+                size={15}
+                color="#032E6F"
               />
             }
           />
@@ -47,8 +53,8 @@ export const CourseCard = ({
               <AntDesign
                 style={{ marginRight: 10 }}
                 name="clockcircle"
-                size={24}
-                color="black"
+                size={15}
+                color="#032E6F"
               />
             }
           />

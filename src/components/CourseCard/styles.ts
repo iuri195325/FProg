@@ -2,14 +2,16 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   CourseCard: {
-    width: "100%",
+    width: 250,
     backgroundColor: "#fff",
-    borderBottomRightRadius: 10,
-    borderBottomLeftRadius: 10,
-    marginBottom: 20
+    borderRadius: 10,
+    marginBottom: 20,
+    marginRight: 20
   },
   Image: {
     width: "100%",
-    height: 80,
+    height: 90,
+    borderTopRightRadius: 10,
+    borderTopLeftRadius: 10
   },
 });
